@@ -1,0 +1,143 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #F7F7F7;
+  color: #101010;
+}
+
+a {
+  /*
+      Getting rid of default formatting for <a> elements. `inherits` tells that
+      `a` elements should use the value set on its parent for these properties.
+  */
+  text-decoration: inherit;
+  color: inherit;
+}
+
+input, textarea {
+  outline: none;
+}
+
+button {
+  font-family: inherit; /* For all browsers */
+  font-size: 100%; /* For all browsers */
+  line-height: 1.15; /* For all browsers */
+  margin: 0; /* Firefox and Safari have margin */
+  overflow: visible; /* Edge hides overflow */
+  text-transform: none; /* Firefox inherits text-transform */
+  -webkit-appearance: button; /* Safari otherwise prevents some styles */
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+textarea::placeholder {
+  color: #d7d7d7;
+}
+
+textarea {
+  box-sizing: border-box;
+  resize: none;
+}
+
+.page-content {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.username-section {
+  font-weight: bold;
+  display: flex;
+}
+.username-section .username-label {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.username-section .username-input {
+  flex-grow: 1;
+  border: 1px gray;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2784313725);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-right: 10px;
+}
+.username-section .clear-chat-btn {
+  background: #EF6A36;
+  color: white;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+}
+
+.chat-window {
+  background-color: white;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  height: 300px;
+  overflow-y: scroll;
+  font-family: "Courier New", Courier, monospace;
+}
+.chat-window .author {
+  font-weight: bold;
+  color: #DB1243;
+}
+
+.new-message-section {
+  margin-top: 20px;
+}
+.new-message-section .new-message-input {
+  width: 100%;
+  border: 1px gray;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2784313725);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+.new-message-section .new-message-input::placeholder {
+  font-size: 16px;
+}
+.new-message-section .send-message-btn {
+  background: #EF6A36;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
+
+.error-message-popup {
+  position: fixed;
+  visibility: hidden;
+  background-color: #DB1243;
+  color: white;
+  font-weight: bold;
+  top: 40px;
+  right: 40px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.error-message-popup.active {
+  visibility: visible;
+}
+.error-message-popup .close-btn {
+  background-color: #F8D7DA;
+  color: #721C24;
+  padding: 0px 10px 5px 5px;
+  margin-top: 8px;
+}
+.error-message-popup .close-btn .icon {
+  font-size: 24px;
+  margin-right: 5px;
+  font-weight: bold;
+  position: relative;
+  top: 3px;
+}
+
+/*# sourceMappingURL=output.css.map */

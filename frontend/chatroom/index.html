@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>EMSE Chatroom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet" />
+  <link href="assets/stylesheets/output.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="page-content">
+    <div class="username-section">
+      <span class="username-label">Alias: </span>
+      <input class="username-input" type="text">
+      <button class="clear-chat-btn">Clear Chat</button>
+    </div>
+    <div class="chat-window">
+      <div class="chat-entry">
+        <span class="author">Admin</span>
+        <span class="delimiter">:&nbsp;</span>
+        <span class="message">Welcome to our chat</span>
+      </div>
+      <div class="chat-entry">
+        <span class="author">Bérénice</span>
+        <span class="delimiter">:&nbsp;</span>
+        <span class="message">Que le jour recommence et que le jour finisse, Sans que jamais Titus puisse voir
+          Bérénice</span>
+      </div>
+      <div class="chat-entry">
+        <span class="author">Antiochus</span>
+        <span class="delimiter">:&nbsp;</span>
+        <span class="message">Puisse le ciel verser sur toutes vos années, Mille prospérités l'une à l'autre enchaînées!
+        </span>
+      </div>
+    </div>
+    <div class="new-message-section">
+      <textarea rows="3" class="new-message-input" placeholder="Enter your message"></textarea>
+      <button class="send-message-btn">Send</button>
+    </div>
+  </div>
+
+  <div class="error-message-popup active">
+    <div class="message">An unexpected error occured</div>
+    <button class="close-btn"><span class="icon">&times;</span>Close</button>
+  </div>
+  <script src="./frontendChat.js"></script>
+</body>
+
+</html>
+

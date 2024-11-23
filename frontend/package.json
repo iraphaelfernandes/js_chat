@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "commander": "^12.1.0",
+    "express": "^4.21.0",
+    "sass": "^1.80.1"
+  },
+  "scripts": {
+    "sass:watch": "CHOKIDAR_USEPOLLING=true sass --watch chatroom/style.scss chatroom/assets/stylesheets/output.css",
+    "start": "npm run sass:watch & node frontendServer.js"
+  }
+}

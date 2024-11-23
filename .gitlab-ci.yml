@@ -1,0 +1,51 @@
+image: node:18
+
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  NODE_ENV: development
+  RAILWAY_TOKEN: $RAILWAY_TOKEN  # Set this in GitLab CI/CD variables
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHORT_SHA
+
+testBackend:
+  stage: test
+  script:
+    - cd backend
+    - npm install
+    - npm test
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+      changes: 
+        - backend/**/*
+
+deployBackend:
+  stage: deploy
+  script:
+    - cd backend/
+    - npm install
+    - ./node_modules/.bin/railway up --service chat_node_backend --detach
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+      changes: 
+        - backend/**/*
+
+
+
+buildBackendDockerImage:
+  image: docker:20.10.16
+  services:
+  - name: docker:20.10.16-dind
+    alias: docker
+  stage: build
+  script:
+    - cd backend
+    - echo "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
+    - docker build -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+      changes: 
+        - backend/**/*
