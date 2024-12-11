@@ -1,19 +1,3 @@
-# Frontend Web Development 2024/2025 Assignment #2
-## Introduction to Javascript
-
-### Planning
-
-This assignment evaluates the content of the lecture of the 18/10/2024 "Introduction to
-javascript"
-
-### Submission procedure
-
-- Submit your assignment on the eCampus platform : https://ecampus.emse.fr/mod/assign/view.php?id=29839
-
-Compress your projet directory into an archive format (ZIP, 7z, tar, ...) and upload a single file
-Due to the number of students in the lecture, you have to work in groups of 2 or 3 persons.
-
-Please register on the Google Stylesheet (linked in eCampus).
 
 ### Getting the project running
 
